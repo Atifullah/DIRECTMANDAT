@@ -1,0 +1,31 @@
+{
+  "pages": {
+    "forgot_pass": {
+      "forgot_your_password": "Mot de passe oublié"
+    },
+    "forgot_button": {
+      "Receive_my_new_password": "Recevoir mon nouveau mot de passe"
+    },
+    "forget_login": {
+      "To_log_in": "Se connecter"
+    },
+    "login_welcome": {
+      "welcome": "Bienvenue"
+    },
+    "login_username": {
+      "Username": "Nom d’utilisateur"
+    },
+    "login_password": {
+      "Password": "Mot de passe"
+    },
+    "login_placeholder": {
+      "Enter_Password": "Entrer le mot de passe"
+    },
+    "login_forget_your_password": {
+      "Forgot_your_password": "Mot de passe oublié"
+    },
+    "login_log_in": {
+      "To_log_in": "Se connecter"
+    }
+  }
+}

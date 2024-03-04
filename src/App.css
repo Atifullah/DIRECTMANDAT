@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+input{
+  caret-color: black;
+}
+
+body {
+  background-color: white;
+}
+
+.login__image-linear-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%),
+    url(../public/images/login.jpg), lightgray 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 640px) {
+  .login__image-clip-path {
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
+}
+
+.forget__image-linear-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%),
+    url(../public/images/forget.jpg), lightgray 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 640px) {
+  .forget__image-clip-path {
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
+}
+
+.main__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../public/images/main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 90%;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  width: 90%;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: gray;
+  height: 30px;
+  width: 30px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: #ED7A37;
+  border-width: 0px;
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 10px;
+  top: 5px;
+  width: 9px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.react-calendar__month-view__weekdays__weekday{
+  background: #6FBAFF ;
+  color: white;
+  font-weight: bold !important;
+  font-size: larger;
+  padding: 10px 0px !important;
+  border-radius: 8px;
+  width: 13%;
+  flex: none !important;
+}
+
+.react-calendar__month-view__weekdays__weekday--current {
+  background: #2E47CC !important;
+}
+
+.react-calendar__month-view__weekdays{
+  justify-content: space-between;
+}
+
+.react-calendar__month-view__days{
+  width: 100%;
+  justify-content: space-between !important;
+}
+
+.react-calendar__month-view__days__day{
+  font-weight: bold !important;
+  font-size: larger;
+  background: #FFCBA5 !important;
+  color: #323232 !important;
+  border-radius: 8px;
+  padding: 10px 0px !important;
+  width: 13% !important;
+  flex: none !important;
+  margin: 3px 0px !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  background: #FFEFE3 !important;
+  color: #C0C0C0 !important;
+}
+
+.react-calendar__navigation__label__labelText--from{
+  font-weight: bold !important;
+  text-transform: capitalize !important;
+}
+
+.react-calendar__navigation{
+  display: flex !important;
+  justify-content: space-between;
+  gap: 7px;
+  align-items: center;
+}
+
+.react-calendar__navigation__arrow{
+  background: #ED7A37 !important;
+  padding: 5px 5px 8px 5px !important;
+  flex: none !important;
+  border-radius: 8px !important;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.react-calendar__tile--active {
+  background: #ED7A37 !important;
+  color: white !important;
+}
